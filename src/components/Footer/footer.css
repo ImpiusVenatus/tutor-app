@@ -1,0 +1,140 @@
+.footer {
+    background: #2a1332;
+    color: #fff;
+    line-height: 1.5;
+    padding: 40px 0 0 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 50px;
+    max-width: 1200px;
+    margin: 0 auto 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    padding: 0 0 2rem;
+    border-bottom: 1px solid #fff;
+  }
+
+  .footer-section:last-child{
+    border: none;
+  }
+  
+  .footer-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+ 
+  .about{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .about-right{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .social-media-icons{
+    display: flex;
+    gap: 1.2rem;
+    padding: 1.2rem 0;
+  }
+  
+  .social-icons{
+    color: #eee;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .tution-section{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+  }
+
+  .tutions{
+    width: 60%;
+  }
+
+  .online-classes{
+    width: 40%;
+  }
+
+  .links, .classes{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 8rem;
+  }
+
+  .links ul, .classes ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .links ul li a, .classes ul li a{
+    color: #fff;
+    font-weight: 300;
+    cursor: pointer;
+    font-size: 15px;
+  }
+
+  .newsletter{
+    padding: 2rem 0;
+  }
+
+  .newsletter input{
+    max-width: 550px;
+    height: 100%;
+    margin: 1.2rem 0;
+    padding: 0.8rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-color: rgba(0, 0, 0, 0.2);
+    caret-color: #eee;
+    color: #eee;
+  }
+
+  .inputbtn{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .subscribe-btn{
+    display: flex;
+    color: #fff;
+    background-color: #F97316;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .footer-bottom{
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+    }
+  
+    .footer-section {
+      margin-bottom: 20px;
+    }
+  }
+  

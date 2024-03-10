@@ -63,9 +63,9 @@ const Header = () => {
   });
 
   return (
-    <header className="header py-3" ref={headerRef}>
-      <div className="container">
-        <div className="navbar">
+    <header className="header" ref={headerRef}>
+      <nav className="navbar">
+        <div className="container-fluid">
           {/* ===============LOGO============= */}
           <div className="logo" ref={headerRef}>
             <a href="/">Tutor</a>
@@ -75,33 +75,34 @@ const Header = () => {
             <div className="nav_items">
               <ul className="nav_links" ref={navRef}>
                 {nav_links.map((item, index) => (
-                  <NavLink
-                    to={item.path}
-                    key={index}
-                    className={(navClass) =>
-                      navClass.isActive ? "active_link" : ""
-                    }
-                  >
-                    <li className="nav_item">{item.display}</li>
-                  </NavLink>
+                  <li className="nav_item" key={index}>
+                    <NavLink
+                      to={item.path}
+                      className={(navClass) =>
+                        navClass.isActive ? "active_link" : ""
+                      }
+                    >
+                      {item.display}
+                    </NavLink>
+                  </li>
                 ))}
               </ul>
             </div>
-          </div>
-
-          <div className="">
-            <button className="loginBtn" onClick={toggleModal}>
-              Join Us
-            </button>
-
-            {/* <LoginModal showModal={showModal} toggleModal={toggleModal}/> */}
-            <span onClick={toggleMenu} className="hamburger-icon">
-              <i className="ri-menu-line"></i>
-            </span>
-            <HamburgerMenu showMenu={showMenu} toggleMenu={toggleMenu} />
+            <div>
+              <button className="loginBtn" onClick={toggleModal}>
+                Get Started
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+        <div className="">
+          {/* <LoginModal showModal={showModal} toggleModal={toggleModal}/> */}
+          <span onClick={toggleMenu} className="hamburger-icon">
+            <i className="ri-menu-line"></i>
+          </span>
+          <HamburgerMenu showMenu={showMenu} toggleMenu={toggleMenu} />
+        </div>
+      </nav>
     </header>
   );
 };
