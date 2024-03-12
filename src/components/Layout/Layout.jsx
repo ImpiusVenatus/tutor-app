@@ -1,16 +1,22 @@
-import Navbar from '../Navigation/Navbar'
-import Footer from '../Footer/Footer'
-import Routers from '../../routers/Routers'
+import Navbar from "../Navigation/Navbar";
+import Footer from "../Footer/Footer";
+import Routers from "../../routers/Routers";
+import { useLocation } from "react-router-dom";
 
 const Layout = () => {
+  const location = useLocation();
+
+  const hideForPaths = ["/login", "/register", "/signin", "/signup"];
+
+  const showNavbarAndFooter = !hideForPaths.includes(location.pathname);
 
   return (
     <>
-      <Navbar />
+      {showNavbarAndFooter && <Navbar />}
       <Routers />
-      <Footer />
+      {showNavbarAndFooter && <Footer />}
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

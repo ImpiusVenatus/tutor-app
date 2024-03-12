@@ -6,6 +6,8 @@ import LoginForm from "../views/Login";
 import Retailers from "../views/Retailers";
 import Services from "../views/Services";
 import TeacherRegistration from "../views/TeacherRegistration";
+import SignIn from "../views/SignIn";
+import SignUp from "../views/SignUp";
 
 const Router = () => {
   return (
@@ -17,6 +19,8 @@ const Router = () => {
       <Route path="/about" element={<About />} />
       <Route path="/teacherRegister" element={<TeacherRegistration />} />
       <Route path="/login" element={<LoginForm />} />
+      <Route path="/signup" element={<SignUp />} />
+      <Route path="/signin" element={<SignIn />} />
     </Routes>
   );
 };

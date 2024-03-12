@@ -1,0 +1,62 @@
+.sign-in-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .sign-in-form-container h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    width: 300px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 5px;
+    width: 100%;
+  }
+  
+  button[type="submit"] {
+    padding: 5px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .or-container {
+    margin: 20px 0;
+  }
+  
+  .or-container span {
+    background-color: #ddd;
+    padding: 5px 20px;
+  }
+  
+  .google-sign-in-button {
+    padding: 5px 20px;
+    background-color: #ea4335;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .lost-password-container {
+    margin-top: 20px;
+  }
+  
+  .lost-password-container a {
+    text-decoration: none;
+    color: #007bff;
+  }
