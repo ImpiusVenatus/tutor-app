@@ -1,0 +1,27 @@
+.form {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.form textarea {
+  width: 100%;
+  height: 300px;
+  resize: none;
+}
+
+.form button {
+  background-color: #1c1c1c;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.8rem;
+  border: 1px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+
+.form button:hover {
+  background-color: #fff;
+  color: #1c1c1c;
+
+  border: 1px solid #1c1c1c;
+  transition: 0.3s ease-in-out;
+}

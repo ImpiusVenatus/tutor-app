@@ -9,28 +9,30 @@
 .left-side {
   flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
-}
-
-.logo{
-  max-width: 500px;
+  background-color: #0a0f26;
 }
 
 .left-side img {
   width: 100%;
   max-width: 500px;
 }
+.left-side .logo {
+  max-width: 300px !important;
+  padding: 2rem 0;
+}
 
-.left-side h2{
+.left-side h2 {
   font-size: 36px;
   color: #fff;
 }
 
-.left-side span{
+.left-side span {
   font-size: 28px;
-  color: #FCCF14;
+  color: #fccf14;
 }
 
 .right-side {
@@ -44,12 +46,12 @@
 .right-side h1 {
   font-size: 36px;
   margin-bottom: 10px;
-  color: #6A307D;
+  color: #6a307d;
 }
 
 .right-side p {
   font-size: 28px;
-  color: #1C1C1C;
+  color: #1c1c1c;
   font-weight: bold;
   margin-bottom: 30px;
 }
@@ -72,20 +74,26 @@
   padding: 0;
   margin: 0.8rem 0;
   height: 48px;
-  color: #1C1C1C;
+  color: #1c1c1c;
   font: 600 15px "Outfit", sans-serif;
-  caret-color: #1C1C1C;
+  caret-color: #1c1c1c;
   line-height: 24px;
   border-bottom: 1px solid #adadad;
 }
 
-input::placeholder{
+.auth-container input:focus,
+.auth-container input:hover {
+  border-bottom: 1px solid #1c1c1c;
+  transition: 0.3s ease-in-out;
+}
+
+input::placeholder {
   color: #aab4c7;
 }
 
 .right-side button[type="submit"] {
   padding: 12px 20px;
-  background-color: #6A307D;
+  background-color: #6a307d;
   color: white;
   border: none;
   cursor: pointer;
@@ -125,7 +133,7 @@ input::placeholder{
 
 .join-us-container a {
   text-decoration: none;
-  color: #6A307D;
+  color: #6a307d;
   font-size: 1rem;
 }
 
@@ -141,16 +149,10 @@ input::placeholder{
   margin-bottom: 10px;
 }
 
-
 .dropdown {
   margin: 0 auto;
-  z-index: 10000;
   width: 100%;
   position: relative;
-}
-.dropdown,
-.dropdown * {
-  z-index: 10;
 }
 .dropdown .dropdown-btn {
   cursor: pointer;
@@ -176,6 +178,7 @@ input::placeholder{
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.2s ease-out;
+  z-index: 100000;
 }
 .dropdown-active {
   max-height: 300px;
@@ -184,7 +187,7 @@ input::placeholder{
 .dropdown-content .item {
   padding: 10px;
   cursor: pointer;
-   background-color: #6A307D;
+  background-color: #6a307d;
   border-bottom: 1px solid rgb(199, 199, 199);
 }
 .dropdown-content .item:last-child {
@@ -195,20 +198,20 @@ input::placeholder{
   transition: 0.3s ease-in-out;
 }
 
-button {
+.auth-container button {
   display: block;
   width: 300px;
   margin: 0 auto;
 }
 
-.subjects-container{
+.subjects-container {
   width: 100%;
   display: flex;
 }
 
 .subject-tag {
   display: inline-block;
-  background-color: #451e52; 
+  background-color: #451e52;
   color: #fff;
   padding: 0.4rem;
   margin: 4px 4px 4px 0;
@@ -219,4 +222,8 @@ button {
   margin-left: 8px;
   cursor: pointer;
   color: #999;
+}
+
+.progress-container {
+  padding: 0.8rem 0;
 }

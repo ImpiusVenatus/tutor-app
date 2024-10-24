@@ -1,0 +1,65 @@
+.login-modal {
+  position: absolute;
+  top: 100%;
+  z-index: 1000;
+}
+
+.login-modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: auto;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.login-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.login-toggle button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+}
+
+.login-toggle button.active {
+  font-weight: bold;
+  background-color: #0c7480ff;
+  color: #fff;
+}
+
+.login-toggle button:hover {
+  border: 1px solid #1c1c1c;
+}
+
+.login-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.login-btn a {
+  text-align: center;
+  background-color: #0a0f26;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 1.2rem;
+  cursor: pointer;
+}
+
+.login-btn i {
+  padding-right: 8px;
+}

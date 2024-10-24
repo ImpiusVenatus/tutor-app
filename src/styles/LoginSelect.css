@@ -1,0 +1,32 @@
+.login-select {
+  max-width: 1200px;
+  margin: auto;
+  height: 80vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.select-btn {
+  display: inline-block;
+}
+
+.login-select a {
+  background-color: #f97316;
+  display: block;
+  margin: auto;
+  max-width: 400px;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.login-select a:hover {
+  background-color: #ff4500;
+  transition: 0.3s ease-in-out;
+}

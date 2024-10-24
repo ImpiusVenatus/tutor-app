@@ -1,79 +1,85 @@
 .testimonial {
-    max-width: 1200px;
-    margin: auto;
-    padding: 50px;
-    padding-bottom: 80px;
-  }
-  
-  .testimonial h2 {
-    font-size: 36px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    width: 50%;
-  }
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px;
+  padding-bottom: 80px;
+}
 
-  .testimonial h2 span{
-    color: #1DA1F2;
-  }
+.testimonial svg {
+  color: #1c818dff;
+}
 
-  .testimonial-card{
-    background-color: rgb(218, 218, 218);
-    border-radius: 10px;
-    padding: 2rem;
-    color: #1C1C1C;
-  }
+.testimonial h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  width: 50%;
+}
 
-  .testimonial-container{
-    position: relative;
-  }
+.testimonial h2 span {
+  color: #1da1f2;
+}
 
-  .avatar{
-    max-width: 44px;
-  }
+.testimonial-card {
+  background-color: rgb(218, 218, 218);
+  border-radius: 10px;
+  padding: 2rem;
+  color: #1c1c1c;
+}
 
-  .avatar img{
-    border-radius: 50%;
-  }
+.testimonial-container {
+  position: relative;
+}
 
-  .testimonial-content h4{
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.2rem;
-    margin: 20px 0;
-  }
+.avatar {
+  max-width: 44px;
+}
 
-  .testimonial-content h6{
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.2rem;
-  }
+.avatar img {
+  border-radius: 50%;
+}
 
-  .testimonial-content span{
-    font-size: 16px;
-    font-weight: 400;
-    margin: 20px 0;
-  }
-  .swiper-button-prev, .swiper-button-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(0%);
-    z-index: 10;
-  }
+.testimonial-content h4 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.2rem;
+  margin: 20px 0;
+}
 
-  .swiper-button-prev i, .swiper-button-next i{
-    font-size: 32px;
-    color: #1C1C1C;
-  }
-  
-  .swiper-button-prev {
-    left: -40px !important;
-  }
-  
-  .swiper-button-next {
-    right: -40px !important;
-  }
-  
-  .swiper-button-prev::after, .swiper-button-next::after {
-    display: none;
-  }
-  
+.testimonial-content h6 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2rem;
+}
+
+.testimonial-content span {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 20px 0;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(0%);
+  z-index: 10;
+}
+
+.swiper-button-prev i,
+.swiper-button-next i {
+  font-size: 32px;
+  color: #1c1c1c;
+}
+
+.swiper-button-prev {
+  left: -40px !important;
+}
+
+.swiper-button-next {
+  right: -40px !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}

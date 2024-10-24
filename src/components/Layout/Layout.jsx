@@ -6,7 +6,13 @@ import { useLocation } from "react-router-dom";
 const Layout = () => {
   const location = useLocation();
 
-  const hideForPaths = ["/login", "/register", "/signin", "/signup"];
+  const hideForPaths = [
+    "/login",
+    "/register",
+    "/signin",
+    "/signup",
+    "/guardian-signin",
+  ];
 
   const showNavbarAndFooter = !hideForPaths.includes(location.pathname);
 

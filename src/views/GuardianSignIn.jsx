@@ -1,27 +1,25 @@
 import { useState } from "react";
 import sideImage from "../assets/images/auth/login-img.png";
 import logo from "../assets/images/logo/logo.png";
-import "../styles/Auth.css";
-import { BASE_URL } from "../utils/config";
 import { useNavigate } from "react-router-dom";
+import { BASE_URL } from "../utils/config";
+import "../styles/Auth.css";
 
-const SignIn = () => {
+const GuardianSignIn = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
-
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.id]: e.target.value });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-      const response = await fetch(`${BASE_URL}/teachers/login`, {
+      const response = await fetch(`${BASE_URL}/guardians/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -32,15 +30,15 @@ const SignIn = () => {
       const data = await response.json();
 
       if (response.ok) {
-        localStorage.setItem("token", data.token);
-        // Redirect user to dashboard or desired page upon successful login
-        navigate("/");
+        // Assuming the token is returned in data.token
+        localStorage.setItem("guardiantoken", data.token);
+        navigate("/profile"); // Navigate to the guardian's dashboard
       } else {
-        // Handle invalid credentials or other errors
+        // Handle errors, such as displaying a message to the user
         console.error(data.message);
       }
     } catch (error) {
-      console.error("Error signing in:", error.message);
+      console.error("Error signing in:", error);
     }
   };
 
@@ -60,7 +58,7 @@ const SignIn = () => {
         <form onSubmit={handleSubmit}>
           <input
             type="email"
-            id="email"
+            name="email"
             placeholder="Enter your email"
             value={formData.email}
             onChange={handleChange}
@@ -68,7 +66,7 @@ const SignIn = () => {
           />
           <input
             type="password"
-            id="password"
+            name="password"
             placeholder="Enter your password"
             value={formData.password}
             onChange={handleChange}
@@ -96,4 +94,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default GuardianSignIn;

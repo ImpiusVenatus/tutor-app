@@ -1,0 +1,10 @@
+.instructor-details-container {
+  max-width: 1200px;
+  height: 70vh;
+}
+
+.instructor-details h2 {
+  margin: auto;
+  text-align: center;
+  color: #1c1c1c;
+}

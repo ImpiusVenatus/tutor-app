@@ -1,0 +1,28 @@
+.find-instructors {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.find-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.no-results-placeholder {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  color: #666;
+  width: 80%;
+}
+
+@media screen and (max-width: 1200px) {
+  .find-main {
+    flex-direction: column;
+  }
+  .no-results-placeholder {
+    width: 100%;
+  }
+}

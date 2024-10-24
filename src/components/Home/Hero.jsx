@@ -46,7 +46,7 @@ const HeroSection = () => {
                 </a>
               </li>
               <li>
-                <a href="" className="secbtn">
+                <a href="/signup" className="secbtn">
                   <span>Join as Instructor</span>
                 </a>
               </li>

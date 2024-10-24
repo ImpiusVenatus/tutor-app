@@ -84,13 +84,15 @@ const SignupForm = () => {
   return (
     <div className="auth-container">
       <div className="left-side">
-        <img src={logo} alt="Side Image" className="logo" />
+        <a href="/">
+          <img src={logo} alt="Side Image" className="logo" />
+        </a>
         <img src={sideImage} alt="Side Image" />
         <h2>Yes! we&apos;re making progress</h2>
         <span>every minute & every second</span>
       </div>
       <div className="right-side">
-        <h1>Welcome!</h1>
+        <h1>Welcome, tutor!</h1>
         <p>It&apos;s really nice to see you</p>
         <form onSubmit={handleSubmit}>
           <input
@@ -202,7 +204,9 @@ const SignupForm = () => {
         <div className="or-container">
           <span>OR</span>
         </div>
-        <button className="google-auth-button">Sign in with Google</button>
+        <button className="google-auth-button" disabled>
+          Sign in with Google
+        </button>
 
         <div className="progress-container">
           <div className="lost-password-container">

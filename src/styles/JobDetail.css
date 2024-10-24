@@ -1,0 +1,98 @@
+.job-detail-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.job-detail-container h2 {
+  color: #1c1c1c;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.job-detail-container p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.job-details {
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+}
+
+.salary-detail-boxes {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 2rem 0;
+}
+
+.salary {
+  background-color: #309cff;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0.8rem;
+}
+
+.medium {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f97316;
+  border-radius: 10px;
+  padding: 0.8rem;
+}
+
+.medium i,
+.quantity i,
+.gender i,
+.method i,
+.subject i {
+  color: #fff;
+  padding-right: 0.4rem;
+}
+
+.salary p,
+.medium p,
+.quantity p,
+.gender p,
+.method p {
+  color: #fff;
+  margin: 0;
+}
+
+.quantity {
+  background-color: #2a1332;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0.8rem;
+}
+
+.gender {
+  background-color: #309cff;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0.8rem;
+}
+
+.method {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f97316;
+  border-radius: 10px;
+  padding: 0.8rem;
+}
+
+.subject {
+  background-color: #1c1c1c;
+  display: inline-flex;
+  padding: 0.8rem;
+  border-radius: 10px;
+  color: #fff !important;
+}

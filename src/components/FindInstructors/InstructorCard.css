@@ -1,0 +1,93 @@
+.instructor-card {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.instructor-image {
+  width: 25%;
+  max-width: 200px;
+  position: relative;
+}
+
+.instructor-image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.instructor-image button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 0;
+  padding: 0;
+  background-color: #6a307d;
+  border: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out, padding 0.2s ease-out,
+    opacity 0.2s ease-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.instructor-image button a {
+  color: #fff;
+}
+
+.instructor-card:hover .instructor-image button {
+  max-height: 50px;
+  padding: 0.8rem;
+  opacity: 1;
+  visibility: visible;
+  transition: max-height 0.2s ease-in, padding 0.2s ease-in,
+    opacity 0.2s ease-in;
+}
+
+.instructor-info {
+  padding: 20px;
+}
+
+.instructor-name {
+  margin: 0;
+  font-size: 20px;
+  color: #1c1c1c;
+}
+
+.instructor-details {
+  margin: 5px 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.instructor-rating {
+  margin: 5px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #009688;
+}
+
+.star {
+  color: #ffd101;
+}
+.online {
+  color: #f97316;
+}
+
+.offline {
+  color: #309cff;
+}
+
+.both {
+  color: #f97316;
+}
+
+.subject-box {
+  background-color: #cecece;
+  padding: 0.4rem;
+  border-radius: 10px;
+}

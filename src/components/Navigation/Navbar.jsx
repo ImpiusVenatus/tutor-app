@@ -2,6 +2,8 @@ import { useRef, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 // import LoginModal from '../../shared/LoginModal'
 import HamburgerMenu from "./HamburgerMenu";
+import logo from "../../assets/images/logo/logo.png";
+import LoginModal from "../../shared/LoginModal";
 
 import "./navbar.css";
 
@@ -11,16 +13,8 @@ const nav_links = [
     display: "Home",
   },
   {
-    path: "/about",
-    display: "About",
-  },
-  {
-    path: "/team",
-    display: "Team",
-  },
-  {
-    path: "/blog",
-    display: "Blog",
+    path: "/jobs",
+    display: "Jobs",
   },
 ];
 
@@ -30,47 +24,52 @@ const Header = () => {
   const menuRef = useRef(null);
 
   const [showModal, setShowModal] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const toggleModal = () => {
+  const toggleModal = (e) => {
+    if (e) e.preventDefault();
     setShowModal(!showModal);
   };
-
-  const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
 
-  const stickyHeaderFunc = () => {
-    window.addEventListener("scroll", () => {
-      if (
-        headerRef.current &&
-        (document.body.scrollTop > 80 ||
-          document.documentElement.scrollTop > 80)
-      ) {
-        headerRef.current.classList.add("sticky_header");
-        menuRef.current.classList.add("sticky_header_link");
-      } else if (headerRef.current) {
-        headerRef.current.classList.remove("sticky_header");
-        menuRef.current.classList.remove("sticky_header_link");
-      }
-    });
-  };
-
   useEffect(() => {
+    const token = localStorage.getItem("token");
+    const guardianToken = localStorage.getItem("guardiantoken");
+    setIsLoggedIn(!!token || !!guardianToken);
+
+    const stickyHeaderFunc = () => {
+      window.addEventListener("scroll", () => {
+        if (
+          headerRef.current &&
+          (document.body.scrollTop > 80 ||
+            document.documentElement.scrollTop > 80)
+        ) {
+          headerRef.current.classList.add("sticky_header");
+          menuRef.current.classList.add("sticky_header_link");
+        } else if (headerRef.current) {
+          headerRef.current.classList.remove("sticky_header");
+          menuRef.current.classList.remove("sticky_header_link");
+        }
+      });
+    };
+
     stickyHeaderFunc();
-    return window.removeEventListener("scroll", stickyHeaderFunc);
-  });
+    return () => window.removeEventListener("scroll", stickyHeaderFunc);
+  }, []);
 
   return (
     <header className="header" ref={headerRef}>
       <nav className="navbar">
         <div className="container-fluid">
-          {/* ===============LOGO============= */}
           <div className="logo" ref={headerRef}>
-            <a href="/">Tutor</a>
+            <a href="/">
+              <img src={logo} alt="logo"></img>
+            </a>
           </div>
-          {/* ===============MENU============= */}
           <div className="navigation" ref={menuRef}>
             <div className="nav_items">
               <ul className="nav_links" ref={navRef}>
@@ -88,15 +87,31 @@ const Header = () => {
                 ))}
               </ul>
             </div>
+            {!isLoggedIn ? (
+              <a href="#" className="login" onClick={toggleModal}>
+                Login
+              </a>
+            ) : (
+              <a href="#" className="avatar" onClick={toggleModal}>
+                <i className="ri-user-fill"></i>
+              </a>
+            )}
+            {showModal && (
+              <LoginModal
+                showModal={showModal}
+                toggleModal={toggleModal}
+                isLoggedIn={isLoggedIn}
+                setIsLoggedIn={setIsLoggedIn}
+              />
+            )}
             <div>
-              <button className="loginBtn" onClick={toggleModal}>
-                Get Started
-              </button>
+              <a href="/find-instructors" className="loginBtn">
+                Find Tutor
+              </a>
             </div>
           </div>
         </div>
         <div className="">
-          {/* <LoginModal showModal={showModal} toggleModal={toggleModal}/> */}
           <span onClick={toggleMenu} className="hamburger-icon">
             <i className="ri-menu-line"></i>
           </span>
